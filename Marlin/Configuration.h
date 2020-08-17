@@ -730,7 +730,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 4000, 4000, 4000, 395 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 4040, 4040, 4040, 395 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -750,11 +750,11 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 100, 100, 10, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 50, 50, 10, 1000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
-  #define MAX_ACCEL_EDIT_VALUES       { 6000, 6000, 200, 20000 } // ...or, set your own edit limits
+  #define MAX_ACCEL_EDIT_VALUES       { 100, 100, 20, 2000 } // ...or, set your own edit limits
 #endif
 
 /**
@@ -765,9 +765,9 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION           100    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION   100    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION    500    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_ACCELERATION           10    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION   10    // E acceleration for retracts
+#define DEFAULT_TRAVEL_ACCELERATION    10    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -1092,8 +1092,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 110
-#define Y_BED_SIZE 110
+#define X_BED_SIZE 100
+#define Y_BED_SIZE 100
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
