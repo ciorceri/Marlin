@@ -2271,7 +2271,7 @@
     #ifdef HOMING_FEEDRATE_XY
       #define XY_PROBE_SPEED HOMING_FEEDRATE_XY
     #else
-      #define XY_PROBE_SPEED 4000
+      #define XY_PROBE_SPEED 2500
     #endif
   #endif
   #ifndef NOZZLE_TO_PROBE_OFFSET

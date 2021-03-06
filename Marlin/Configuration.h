@@ -127,7 +127,8 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_RAMPS_14_EFB
+  // #define MOTHERBOARD BOARD_RAMPS_14_EFB // extruder, fan, bed
+  #define MOTHERBOARD BOARD_RAMPS_14_EFF    // extruder-D10, fan-D9, fan-D8
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
@@ -877,7 +878,7 @@
  * or (with LCD_BED_LEVELING) the LCD controller.
  */
 #define PROBE_MANUALLY
-#define MANUAL_PROBE_START_Z 0.2
+#define MANUAL_PROBE_START_Z 1
 
 /**
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
@@ -1123,16 +1124,16 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 160  // 20 cm
-#define Y_BED_SIZE 160  // 20 cm
+#define X_BED_SIZE 165  // 16.5 cm
+#define Y_BED_SIZE 210  // 21 cm
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
-#define Y_MAX_POS (Y_BED_SIZE + 40)
-#define Z_MAX_POS 71    // 8cm
+#define Y_MAX_POS Y_BED_SIZE
+#define Z_MAX_POS 115    // 12 cm
 
 /**
  * Software Endstops
